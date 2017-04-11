@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <table id="playlist">
+        <thead>
+            <th>Artist</th>
+            <th>Title</th>
+            <th>Cover</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="modal-container" data-modal-container>
+        <div class="modal" data-modal>
+            <div class="modal-content">
+                <form>
+                    <label for="artist">Artist</label>
+                    <input id="artist" name="artist" type="text">
+                    <br/>
+                    <label for="title">Title</label>
+                    <input id="title" name="title" type="text">
+                    <br/>
+                    <label for="cover">Cover</label>
+                    <input id="cover" name="cover" type="text">
+                    <br/>
+                    <label for="label">Label</label>
+                    <input id="label" name="label" type="text">
+                    <br/>
+                    <label for="playlist">Playlist</label>
+                    <input id="playlist" name="playlist" type="text">
+                    <br/>
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                                <option value="" selected>Pick a status</option>
+                                <option value="1">Playing</option>
+                                <option value="2">Queued</option>
+                                <option value="3">Paused</option>
+                            </select>
+                            <input type="hidden" id="artist_id" name="artist_id">
+                </form>
+            </div>
+            <div class "modal-buttons">
+                <button class="btn btn-primary" data-modal-accept>
+                        save
+                        </button>
+                <button class="btn" data-modal-close>
+                        cancel
+                        </button>
+                <span id="message"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
